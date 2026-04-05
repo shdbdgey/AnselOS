@@ -1,4 +1,6 @@
-# Prerequisites
+# ======================================
+# Common Build Artifacts
+# ======================================
 *.d
 
 # Object files
@@ -6,13 +8,17 @@
 *.ko
 *.obj
 *.elf
+*.bin
+*.img
 
 # Linker output
 *.ilk
 *.map
 *.exp
+*.ld
+*.lds
 
-# Precompiled Headers
+# Precompiled headers
 *.gch
 *.pch
 
@@ -22,34 +28,55 @@
 *.la
 *.lo
 
-# Shared objects (inc. Windows DLLs)
+# Shared libraries
 *.dll
 *.so
 *.so.*
 *.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
+# Debug and symbol files
+*.sym
+*.debug
+*.list
+*.lst
+
+# Build directories
+build/
+out/
+obj/
+bin/
+
+# ======================================
+# AnselOS Project-Specific Rules
+# ======================================
+# Protect closed-source Domain-0 implementation
+src/domain0/
+!src/domain0/include/
+!src/domain0/*.h
+
+# Kernel build/debug intermediate files
+*.log
+*.asm
+*.s
+*.i
 *.hex
+*.rom
+*.vmem
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# Emulator/debugger temporary files
+.qemu/
+.gdb_history
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# IDE and editor configuration
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# debug information files
-*.dwo
+# Local configuration and sensitive data
+config.local
+*.env
+*.key
+*.pem
+*.crt
