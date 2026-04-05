@@ -35,7 +35,7 @@ After boot, the initial monolithic kernel splits into two parts:
 ## 📂 Repository Structure
 ```text
 AnselOS/
-├── LICENSE                 # GPLv3 with Domain 0 closed-source exception
+├── LICENSE                 # GPLv3 with Domain 0 and OSBOOT.efi closed-source exception
 ├── .gitignore              # Ignores build artifacts and closed-source domain 0 code
 ├── README.md               # This file
 ├── src/
