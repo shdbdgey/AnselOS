@@ -44,3 +44,5 @@ AnselOS/
 │   ├── domainS/           # Open-source: temporary transition domain
 │   └── domainN/           # Open-source: user domain, UserKernel and applications
 └── docs/                   # Architecture and design documentation
+|___Boot/
+     |__OSBOOT.efi          # Closed-source: only public headers are committed
